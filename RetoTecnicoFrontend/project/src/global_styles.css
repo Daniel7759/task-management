@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  /* Primary */
+  --color-primary-50: rgb(239, 246, 255);
+  --color-primary-100: rgb(219, 234, 254);
+  --color-primary-200: rgb(191, 219, 254);
+  --color-primary-300: rgb(147, 197, 253);
+  --color-primary-400: rgb(96, 165, 250);
+  --color-primary-500: rgb(59, 130, 246);
+  --color-primary-600: rgb(37, 99, 235);
+  --color-primary-700: rgb(29, 78, 216);
+  --color-primary-800: rgb(30, 64, 175);
+  --color-primary-900: rgb(30, 58, 138);
+
+  /* Success */
+  --color-success-50: rgb(236, 253, 245);
+  --color-success-100: rgb(209, 250, 229);
+  --color-success-200: rgb(167, 243, 208);
+  --color-success-300: rgb(110, 231, 183);
+  --color-success-400: rgb(52, 211, 153);
+  --color-success-500: rgb(16, 185, 129);
+  --color-success-600: rgb(5, 150, 105);
+  --color-success-700: rgb(4, 120, 87);
+  --color-success-800: rgb(6, 95, 70);
+  --color-success-900: rgb(6, 78, 59);
+
+  /* Warning */
+  --color-warning-50: rgb(255, 251, 235);
+  --color-warning-100: rgb(254, 243, 199);
+  --color-warning-200: rgb(253, 230, 138);
+  --color-warning-300: rgb(252, 211, 77);
+  --color-warning-400: rgb(251, 191, 36);
+  --color-warning-500: rgb(245, 158, 11);
+  --color-warning-600: rgb(217, 119, 6);
+  --color-warning-700: rgb(180, 83, 9);
+  --color-warning-800: rgb(146, 64, 14);
+  --color-warning-900: rgb(120, 53, 15);
+
+  /* Error */
+  --color-error-50: rgb(254, 242, 242);
+  --color-error-100: rgb(254, 226, 226);
+  --color-error-200: rgb(254, 202, 202);
+  --color-error-300: rgb(252, 165, 165);
+  --color-error-400: rgb(248, 113, 113);
+  --color-error-500: rgb(239, 68, 68);
+  --color-error-600: rgb(220, 38, 38);
+  --color-error-700: rgb(185, 28, 28);
+  --color-error-800: rgb(153, 27, 27);
+  --color-error-900: rgb(127, 29, 29);
+}
+
+
+* {
+  border-color: #e5e7eb;
+}
+
+body {
+  background-color: #f9fafb; /* Gray 50 */
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'cv03', 'cv04', 'cv11';
+}
+
+/* Component styles */
+.btn-primary {
+  background-color: #2563eb; /* Primary 600 */
+  color: white;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8; /* Primary 700 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #3b82f6; /* Primary 500 */
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #374151; /* Gray 700 */
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border: 1px solid #d1d5db; /* Gray 300 */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb; /* Gray 50 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-danger {
+  background-color: #dc2626; /* Error 600 */
+  color: white;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c; /* Error 700 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb; /* Gray 200 */
+  padding: 1.5rem;
+  transition: box-shadow 200ms;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db; /* Gray 300 */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 200ms, box-shadow 200ms;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6; /* Primary 500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #374151; /* Gray 700 */
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 200ms, color 200ms;
+}
+
+.sidebar-link:hover {
+  background-color: #eff6ff; /* Primary 50 */
+  color: #2563eb; /* Primary 600 */
+}
+
+.sidebar-link.active {
+  background-color: #dbeafe; /* Primary 100 */
+  color: #1d4ed8; /* Primary 700 */
+}
+
+/*
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-50 font-sans antialiased;
+    font-feature-settings: 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-2.5 px-4 border border-gray-300 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-danger {
+    @apply bg-error-600 hover:bg-error-700 text-white font-medium py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-error-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+  }
+  
+  .sidebar-link {
+    @apply flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors duration-200 font-medium;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-primary-100 text-primary-700;
+  }
+}*/
